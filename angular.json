@@ -32,7 +32,7 @@
             ],
             "scripts": [
               {
-                "input": "process.js",
+                "input": "pre-dist/process.js",
                 "inject": false
               }
             ]
@@ -45,8 +45,8 @@
                   "with": "src/environments/environment.prod.ts"
                 },
                 {
-                  "replace": "process.js",
-                  "with": "process.prod.js"
+                  "replace": "pre-dist/process.js",
+                  "with": "dist/process.prod.js"
                 }
               ],
               "optimization": true,

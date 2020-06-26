@@ -1,15 +1,15 @@
 {
   "name": "troncli",
   "version": "0.0.0",
-  "main": "process.js",
+  "main": "pre-dist/process.js",
   "scripts": {
     "ng": "ng serve",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist pre-dist",
     "electron": "wait-on http://localhost:4200 && electron .",
     "prestart": "npm run clean",
     "start": "concurrently -k \"ng serve\" \"npm run electron-tsc\"",
     "prebuild": "npm run clean",
-    "electron-tsc": "tsc process.ts && npm run electron",
+    "electron-tsc": "tsc --project tsconfig.electron.json && npm run electron",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
