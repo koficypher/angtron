@@ -1,0 +1,11 @@
+{
+  "name": "singer",
+  "version": "0.0.0",
+  "main": "process.prod.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "9.0.5"
+  }
+}

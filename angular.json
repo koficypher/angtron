@@ -46,7 +46,7 @@
                 },
                 {
                   "replace": "pre-dist/process.js",
-                  "with": "dist/process.prod.js"
+                  "with": "pre-dist/process.prod.js"
                 }
               ],
               "optimization": true,

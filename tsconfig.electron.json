@@ -4,9 +4,10 @@
     "noImplicitAny": true,
     "sourceMap": true,
     "outDir": "pre-dist",
-    "baseUrl": ".",
+    "baseUrl": "tron",
     "paths": {
-      "*": ["node_modules/*"]
+      "@models/*": ["models/*"],
+      "@config/*":["config/*"]
     }
   },
   "include": [
