@@ -30,14 +30,18 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-              {
-                "input": "pre-dist/process.js",
-                "inject": false
-              }
-            ]
+            "scripts": []
           },
           "configurations": {
+            "development": {
+               "fileReplacements": [],
+               "scripts": [
+                {
+                  "input": "pre-dist/process.js",
+                  "inject": false
+                }
+               ]
+            },
             "production": {
               "fileReplacements": [
                 {

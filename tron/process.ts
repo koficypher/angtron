@@ -1,5 +1,9 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, remote } from 'electron';
 import * as path from 'path';
+
+const isDev = (process.env.ELECTRON_IS_DEV === 'true');
+console.log(typeof isDev);
+
 
 // tslint:disable-next-line: typedef
 function createWindow() {
@@ -9,15 +13,28 @@ function createWindow() {
     width: 800,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
+      allowRunningInsecureContent: (isDev) ? true : false
     },
 
   });
 
-  // and load the angular url of the app.
-  mainWindow.loadURL('http://localhost:4200');
+  if (isDev) {
+    // and load the angular url of the app.
+    mainWindow.loadURL('http://localhost:4200');
 
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+    // Open the DevTools.
+    mainWindow.webContents.openDevTools();
+    console.log('development mode');
+  } else {
+    // and load the index.html of the app.
+    mainWindow.loadFile('index.html');
+
+    // Open the DevTools.
+    mainWindow.webContents.openDevTools();
+    console.log('production mode');
+  }
+
+
 }
 
 // This method will be called when Electron has finished
