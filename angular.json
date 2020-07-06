@@ -47,10 +47,6 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
-                },
-                {
-                  "replace": "pre-dist/process.js",
-                  "with": "pre-dist/process.prod.js"
                 }
               ],
               "optimization": true,

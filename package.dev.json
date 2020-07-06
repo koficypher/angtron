@@ -1,12 +1,14 @@
 {
   "name": "singer",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "process.js",
   "scripts": {
     "start": "cross-env ELECTRON_IS_DEV=false electron ."
   },
   "dependencies": {
-    "electron": "9.0.5",
     "cross-env": "^7.0.2"
+  },
+  "devDependencies": {
+    "electron": "9.0.5"
   }
 }
