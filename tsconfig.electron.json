@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "outDir": "pre-dist",
+    "baseUrl": "tron",
+    "paths": {
+      "@models/*": ["models/*"],
+      "@utils/*": ["utils/*"],
+      "@config/*":["config/*"]
+    }
+  },
+  "include": [
+    "tron/**/*"
+  ]
+}
