@@ -1,4 +1,4 @@
-import { app, BrowserWindow, remote } from 'electron';
+import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
 
 const isDev = (process.env.ELECTRON_IS_DEV === 'true');
